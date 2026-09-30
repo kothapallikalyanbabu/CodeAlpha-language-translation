@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Learn - Language Translator</title>
+    <meta name="description" content="A simple, fast, and beautiful language translator.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Simple Learn</h1>
+            <p>Seamlessly translate languages with ease</p>
+        </header>
+
+        <div class="translator-card">
+            <div class="controls">
+                <select id="source-lang" aria-label="Source Language">
+                    <option value="en-GB">English</option>
+                    <option value="es-ES">Spanish</option>
+                    <option value="fr-FR">French</option>
+                    <option value="de-DE">German</option>
+                    <option value="hi-IN">Hindi</option>
+                    <option value="te-IN">Telugu</option>
+                    <option value="zh-CN">Chinese</option>
+                    <option value="ja-JP">Japanese</option>
+                    <option value="ar-SA">Arabic</option>
+                    <option value="ru-RU">Russian</option>
+                    <option value="pt-PT">Portuguese</option>
+                </select>
+
+                <button id="swap-btn" class="icon-btn" title="Swap Languages" aria-label="Swap Languages">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </button>
+
+                <select id="target-lang" aria-label="Target Language">
+                    <option value="es-ES">Spanish</option>
+                    <option value="en-GB">English</option>
+                    <option value="fr-FR">French</option>
+                    <option value="de-DE">German</option>
+                    <option value="hi-IN">Hindi</option>
+                    <option value="te-IN">Telugu</option>
+                    <option value="zh-CN">Chinese</option>
+                    <option value="ja-JP">Japanese</option>
+                    <option value="ar-SA">Arabic</option>
+                    <option value="ru-RU">Russian</option>
+                    <option value="pt-PT">Portuguese</option>
+                </select>
+            </div>
+
+            <div class="text-areas">
+                <div class="input-area">
+                    <textarea id="source-text" placeholder="Type text here..." aria-label="Source Text"></textarea>
+                    <div class="actions">
+                        <button class="icon-btn" id="speak-source" title="Listen" aria-label="Listen">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </button>
+                        <button class="icon-btn" id="copy-source" title="Copy" aria-label="Copy">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="output-area">
+                    <textarea id="target-text" placeholder="Translation will appear here..." readonly aria-label="Translated Text"></textarea>
+                    <div class="actions">
+                        <button class="icon-btn" id="speak-target" title="Listen" aria-label="Listen">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </button>
+                        <button class="icon-btn" id="copy-target" title="Copy" aria-label="Copy">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <button id="translate-btn" class="primary-btn">Translate</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
